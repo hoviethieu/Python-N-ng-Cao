@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1>Chào mừng, {{ username }}!</h1>
+    <a href="{{ url_for('logout') }}" class="btn btn-primary">Đăng xuất</a>
+</div>
+{% endblock %}

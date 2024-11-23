@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Thêm người dùng mới</h1>
+<form action="{{ url_for('add_user') }}" method="post">
+    <div class="form">
+        <label for="hoten">Họ tên:</label>
+        <input type="text" id="hoten" name="hoten" placeholder="Nhập họ tên" required>
+
+        <label for="diachi">Địa chỉ:</label>
+        <input type="text" id="diachi" name="diachi" placeholder="Nhập địa chỉ" required>
+
+        <button type="submit" class="btn btn-success mt-3">Thêm</button>
+    </div>
+</form>
+<a href="{{ url_for('index') }}" class="back-link">Quay lại danh sách</a>
+{% endblock %}
